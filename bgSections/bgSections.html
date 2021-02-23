@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Sections</title>
+    <link rel="stylesheet" href="../prefs.css">
+    <link rel="stylesheet" href="./bgSections.css">
+    <link rel="stylesheet" href="../movingSquares/movingSquares.css">
+    <link rel="stylesheet" href="../headerBump/headerBump.css">
+</head>
+<body>
+
+
+    <section class="movingSquares_container">
+        <div class="movingSquares_content">
+            <h2 class="movingSquares_content-title"></h2> <br />
+            <img src="../imgs/sc-diamond.png" alt="">
+        </div>
+
+        <script>
+            function makeMovingSquares(){
+                const numberOfSquares = 10;
+                const parentElem = document.querySelector('.movingSquares_container');
+                let i = 0;
+
+                while (i < numberOfSquares) {
+                    parentElem.innerHTML += '<div class="movingSquare_square movingSquare_square-' + i + '"></div>'
+                    i++;
+                } 
+            }
+            makeMovingSquares();
+        </script>
+        
+
+    </section>
+
+<header class="headerBump_container">
+    <a href="/#">Code</a>
+    <div class="headerBump_bump">
+        <a class="headerBump_bump-link" href="/#">
+            <img class="headerBump_bump-link-logo" src="../imgs/sc-diamond.png" alt="">
+        </a>
+    </div>
+    <a href="/#">Design</a>
+</header>
+    
+
+    <div class="fullBg_container">
+
+
+
+        <section class="fullBg_section">
+                <div class="fullBg_section-bg">
+                    <div class="fullBg_section-bg-title">
+                        <span class="fullBg_section-bg-title-1">Code is</span>
+                        <span class="fullBg_section-bg-title-2">Poetry</span>
+                    </div>
+                </div>
+                <div class="fullBg_section-content">
+                    <div>
+                        <h1 class="fullBg_section-content-title" >Code is Poetry</h1>
+                        <p class="fullBg_section-content-p" >Like poetry (and transformers), code can be so much more than what first meets the eye. Much like poetry, the best code finds an elegant middle ground between simple readibility and complex meaning, a balancing act every coder wrestles with. </p>
+                    </div>
+
+                    <span class="fullBg_section-content-quote" >“I didn’t have time to write you a short letter, so I wrote you a long one.” ~ Mark Twain</span>
+                </div>
+        </section>
+
+        <section class="fullBg_section">
+                <div class="fullBg_section-bg">
+                    <div class="fullBg_section-bg-title">
+                        <span class="fullBg_section-bg-title-1">Code is</span>
+                        <span class="fullBg_section-bg-title-2">Math</span>
+                    </div>
+                </div>
+                <div class="fullBg_section-content">
+                    <div>
+                        <h1 class="fullBg_section-content-title" >Code is Math</h1>
+                        <!-- <p class="fullBg_section-content-p" >Code is a language in the middle of humans and computers. It isn’t a native tongue to either, but with the help of incredibly smart people of who do speak computer, </p> -->
+                        <!-- <p class="fullBg_section-content-p" >Code is a tool to translate human readable language into binary. Ones & zeroes, a series of on or off pulses to various pieces of hardware that perform logical operations with these true or false values, sending them onwards or</p> -->
+                        <p class="fullBg_section-content-p" >Code at it's most basic is only an algorithm to convert instructions for the computer to execute into a format it can understand and act on, basically ones and zeroes.</p>
+                    </div>
+
+                    <span class="fullBg_section-content-quote" >“Code is a system of rules to convert information.” ~ Wikipedia</span>
+                </div>
+        </section>
+
+        <section class="fullBg_section">
+                <div class="fullBg_section-bg">
+                    <div class="fullBg_section-bg-title">
+                        <span class="fullBg_section-bg-title-1">Code is</span>
+                        <span class="fullBg_section-bg-title-2">Art</span>
+                    </div>
+                </div>
+                <div class="fullBg_section-content">
+                    <h1 class="fullBg_section-content-title" >Code is Art</h1>
+                    <p class="fullBg_section-content-p" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint doloribus aspernatur est sunt atque asperiores eveniet ullam necessitatibus dolorum corporis, debitis enim quos quis iste. Soluta illo omnis esse accusantium?</p>
+                </div>
+        </section>
+
+        <section class="fullBg_section">
+                <div class="fullBg_section-bg">
+                    <div class="fullBg_section-bg-title">
+                        <span class="fullBg_section-bg-title-1">Code is</span>
+                        <span class="fullBg_section-bg-title-2">Design</span>
+                        <!-- <span class="fullBg_section-bg-title-2">Structure</span> -->
+                    </div>
+                </div>
+                <div class="fullBg_section-content">
+                    <h1 class="fullBg_section-content-title" >Code is Design</h1>
+                    <!-- <h1 class="fullBg_section-content-title" >Code is Structure</h1> -->
+                    <p class="fullBg_section-content-p" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint doloribus aspernatur est sunt atque asperiores eveniet ullam necessitatibus dolorum corporis, debitis enim quos quis iste. Soluta illo omnis esse accusantium?</p>
+                </div>
+        </section>
+
+        <section class="fullBg_section">
+                <div class="fullBg_section-bg">
+                    <div class="fullBg_section-bg-title">
+                        <span class="fullBg_section-bg-title-1">Code is</span>
+                        <!-- <span class="fullBg_section-bg-title-2">Hard</span> -->
+                        <span class="fullBg_section-bg-title-2">Alive</span>
+                    </div>
+                </div>
+                <div class="fullBg_section-content">
+                    <!-- <h1 class="fullBg_section-content-title" >Code is Hard</h1> -->
+                    <h1 class="fullBg_section-content-title" >Code is Alive</h1>
+                    <p class="fullBg_section-content-p" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint doloribus aspernatur est sunt atque asperiores eveniet ullam necessitatibus dolorum corporis, debitis enim quos quis iste. Soluta illo omnis esse accusantium?</p>
+                    <!-- Code can be hard to learn, it can be hard to write, it can be hard  -->
+                </div>
+        </section>
+
+
+
+    </div>
+
+
+    <script>
+        document.addEventListener('scroll', scrollWatcher);
+        function scrollWatcher(){
+            // setInterval
+            // Make the page a gradient instead
+        }
+    </script>
+</body>
+</html>

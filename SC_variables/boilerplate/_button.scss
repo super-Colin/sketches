@@ -1,0 +1,32 @@
+
+$button_padding-main: map-get($spacing, "xsmall") map-get($spacing, "small");
+
+$button:(
+    "padding-main": $button_padding-main,
+
+    "padding-x-main": map-get($spacing, 'small'),
+    "padding-x-small": map-get($spacing, 'xsmall'),
+    "padding-x-medium": map-get($spacing, 'small'),
+    "padding-x-large": map-get($spacing, 'medium'),
+
+    "padding-y-main": map-get($spacing, 'medium'),
+    "padding-y-small": map-get($spacing, 'small'),
+    "padding-y-medium": map-get($spacing, 'medium'),
+    "padding-y-large": map-get($spacing, 'large'),
+
+    "radius-main": $theme_button-radius,
+    "radius-theme": $theme_button-radius,
+    "radius-small": 4px,
+    "radius-medium": 0.45rem,
+    "radius-large": map-get($spacing, 'small'),
+
+    "bg-light": #eee,
+    "bg-dark": #444,
+    "bg-theme-light": $theme_color-button-light,
+    "bg-theme-dark": $theme_color-button-dark
+);
+
+
+// // $button_radius: 4px !default;
+// $button_padding: $global_spacing-xsmall $global_spacing-medium !default;
+

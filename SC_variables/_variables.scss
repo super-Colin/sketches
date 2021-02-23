@@ -1,0 +1,92 @@
+
+$brand_color-main1: #1A7E13;
+
+    /* ==-- timing --== */
+$global_timing-transitionduration-xsmall: .4s;
+$global_timing-transitionduration-small: .7s;
+$global_timing-transitionduration-medium: 0.9s;
+$global_timing-transitionduration-large: 1.4s;
+
+
+
+
+    /* ==-- Fonts --== */
+$global_fontsize-body-xsmall: .6rem;
+$global_fontsize-body-small: .75rem;
+$global_fontsize-body-medium: 1rem;
+$global_fontsize-body-large: 1.2rem;
+$global_fontsize-body-xlarge: 1.35rem;
+
+$global_fontsize-title-xsmall: 1.4rem;
+$global_fontsize-title-small: 1.6rem;
+$global_fontsize-title-medium: 1.8rem;
+$global_fontsize-title-large: 2.5rem;
+$global_fontsize-title-xlarge: 3.1rem;
+$global_fontsize-title-xxlarge: 3.6rem;
+$global_fontsize-title-xxxlarge: 4rem;
+
+$brand_fontfamily-title-main: 'Merriweather', serif;
+$brand_fontweight-title-main: 400;
+$brand_fontfamily-body-main: 'Open Sans', sans-serif;
+$brand_fontweight-body-main: 400;
+
+
+
+/* ==-- Spacing --== */
+$global_spacing-xxsmall: .25rem;
+$global_spacing-xsmall: .45rem;
+/* smaller spacing is best for a small, subtle nudge on something */
+$global_spacing-small: .7rem;
+/* small spacing is for good for spacing under a small h tag (h3-ish) */
+$global_spacing-medium: 1.2rem;
+/* medium spacing is your go to for most padding and margins */
+$global_spacing-large: 2rem;
+/* large spacing are more for vertical spacing(margin) from block to block or large titles */
+$global_spacing-xlarge: 2.6rem;
+/* xlarger spacing are more for vertical spacing(margin) from section to section */
+$global_spacing-xxlarge: 3.2rem;
+$global_spacing-xxxlarge: 3.6rem;
+/* largest spacing is more for vertical spacing(margin) where you want a lot of white space */
+
+$global_spacing-blockMargin: 3.5rem;
+
+$global_spacing-gutters-grid: 1vw;
+$global_spacing-gutters-page: 2vw; /* padding for the side of the page */
+
+
+
+
+// // Set a specific jump point for requesting color jumps
+// $theme-color-interval:      8% ;
+
+// // The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+// $yiq-contrasted-threshold: 150 ;
+
+// // Customize the light and dark text colors for use in our YIQ color contrast function.
+// $yiq-text-dark: $gray-900 ;
+// $yiq-text-light: $white ;
+
+// Z-index master list
+
+
+// $brand_button-radius: 0.6em;
+// $brand_button-padding: $global_spacing-xsmall $global_spacing-medium;
+
+// $button_radius: 0.6em;
+// $button_padding: $brand_button-padding;
+
+
+
+
+
+
+
+
+        /* ==-- Break Points--== */
+    // all break points are used as min-width
+    // You're starting at 0
+    $breakpoint_for-tablet:600px;
+    $breakpoint_for-tabletlandscape:900px;
+    $breakpoint_for-desktop:1180px;
+    $breakpoint_for-desktop4k:1760px;
+

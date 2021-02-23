@@ -1,0 +1,50 @@
+
+$spacing_owl:                   1.3em;
+
+$spacing_xxxsmall:              0.25rem;
+$spacing_xxsmall:               0.5rem;
+$spacing_xsmall:                0.8rem;
+$spacing_small:                 1rem;
+$spacing_medium:                1.4rem;
+$spacing_large:                 1.8rem;
+$spacing_xlarge:                2.4rem;
+$spacing_xxlarge:               3.1rem;
+$spacing_xxxlarge:              3.8rem;
+
+$spacing:(
+    "xxxsmall":                 $spacing_xxxsmall,
+    "xxsmall":                  $spacing_xxsmall,
+    "xsmall":                   $spacing_xsmall,
+    "small":                    $spacing_small,
+    "medium":                   $spacing_medium,
+    "large":                    $spacing_large,
+    "xlarge":                   $spacing_xlarge,
+    "xxlarge":                  $spacing_xxlarge,
+    "xxxlarge":                 $spacing_xxxlarge,
+
+    "gutter-page":              $theme_spacing-gutter-page,
+
+    "block-margin-y-main":      7vh,
+    "block-margin-y-small":     $spacing_xxlarge,
+    "block-margin-y-medium":    $spacing_xxlarge,
+    "block-margin-y-large":     $spacing_xxlarge,
+
+    "block-margin-x-main":      $theme_spacing-gutter-page,
+    "block-margin-x-gutter":    $theme_spacing-gutter-page,
+    "block-margin-x-small":     $spacing_medium,
+    "block-margin-x-medium":    $spacing_large,
+    "block-margin-x-large":     $spacing_xlarge,
+
+    "block-padding-y-main":     $spacing_medium,
+    "block-padding-y-small":    $spacing_medium,
+    "block-padding-y-medium":   $spacing_large,
+    "block-padding-y-large":    $spacing_xlarge,
+
+    "block-padding-x-main":     $spacing_medium,
+    "block-padding-x-gutter":   $spacing_medium,
+    "block-padding-x-small":    $spacing_medium,
+    "block-padding-x-medium":   $spacing_large,
+    "block-padding-x-large":    $spacing_xlarge,
+);
+
+

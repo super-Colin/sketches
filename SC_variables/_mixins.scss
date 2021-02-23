@@ -1,0 +1,175 @@
+// Mixins
+
+// Make element invisible to the screen and no longer effect page flow,
+// but leave content accessible to screen reader 
+@mixin accessibleDisplayNone{
+    display: none;
+    clip-path: 1px 1px;
+}
+
+// main block mixins:
+// block_maxWidth max width for content container
+// block_margin-(x || y)-(left/right/full || top/bottom/full) ... outer spacing
+// block_padding-(x || y)-(left/right/full || top/bottom/full) ... inner spacing
+
+
+@mixin block_maxWidth{
+    margin-left: sget($spacing, 'block-margin-x-gutter');
+    margin-right: sget($spacing, 'block-margin-x-gutter');
+    @include breakpoint('for-desktop'){
+        max-width: 94vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include breakpoint('for-desktop4k'){
+        max-width: 85vw;
+    }
+}
+
+@mixin block_margin-full{
+    margin: sget($spacing, 'block-margin-y-small') sget($spacing, 'block-margin-x-gutter');
+    
+    @include breakpoint('for-tablet'){
+        margin: sget($spacing, 'block-margin-y-medium') sget($spacing, 'block-margin-x-gutter');
+        // @debug sget($spacing, 'block-margin-y-medium') sget($spacing, 'block-margin-x-gutters');
+    }
+    @include breakpoint('for-desktop'){
+        max-width: 94vw;
+        margin: sget($spacing, 'block-margin-y-large') auto;
+    }
+    @include breakpoint('for-desktop4k'){
+        max-width: 85vw;
+    }
+}
+
+@mixin block_margin-y-top{
+    margin-top: sget($spacing, 'block-margin-y-small');
+
+    @include breakpoint('for-tablet') {
+        margin-top: sget($spacing, 'block-margin-y-medium');
+    }
+    @include breakpoint('for-desktop') {
+        margin-top: sget($spacing, 'block-margin-y-large');
+    }
+}
+@mixin block_margin-y-bottom{
+    margin-bottom: sget($spacing, 'block-margin-y-small');
+
+    @include breakpoint('for-tablet') {
+        margin-bottom: sget($spacing, 'block-margin-y-medium');
+    }
+    @include breakpoint('for-desktop') {
+        margin-bottom: sget($spacing, 'block-margin-y-large');
+    }
+}
+@mixin block_margin-y-full{
+    @include block_margin-y-top;
+    @include block_margin-y-bottom;
+}
+
+
+@mixin block_margin-x-left {
+    margin-left: sget($spacing, 'block-margin-x-gutter');
+
+    @include breakpoint('for-desktop') {
+        max-width: 90vw;
+        margin-left: auto;
+    }
+    @include breakpoint('for-desktop4k') {
+        max-width: 85vw;
+    }
+}
+@mixin block_margin-x-right {
+    margin-right: sget($spacing, 'block-margin-x-gutter');
+
+    @include breakpoint('for-desktop') {
+        max-width: 90vw;
+        margin-right: auto;
+    }
+    @include breakpoint('for-desktop4k') {
+        max-width: 85vw;
+    }
+}
+@mixin block_margin-x-full{
+    @include block_margin-x-left;
+    @include block_margin-x-right;
+}
+
+
+@mixin block_padding-full{
+    padding: sget($spacing, 'block-padding-y-small') sget($spacing, 'block-padding-x-small');
+
+    @include breakpoint('for-tablet') {
+        padding: sget($spacing, 'block-padding-y-medium') sget($spacing, 'block-padding-x-medium');
+    }
+    @include breakpoint('for-desktop') {
+        padding: sget($spacing, 'block-padding-y-large') sget($spacing, 'block-padding-x-large');
+    }
+}
+
+@mixin block_padding-y-top {
+    padding-top: sget($spacing, 'block-padding-y-small');
+    @include breakpoint('for-tablet') {
+        padding-top: sget($spacing, 'block-padding-y-medium');
+    }
+    @include breakpoint('for-desktop') {
+        padding-top: sget($spacing, 'block-padding-y-large');
+    }
+}
+@mixin block_padding-y-bottom {
+    padding-bottom: sget($spacing, 'block-padding-y-small');
+    @include breakpoint('for-tablet') {
+        padding-bottom: sget($spacing, 'block-padding-y-medium');
+    }
+    @include breakpoint('for-desktop') {
+        padding-bottom: sget($spacing, 'block-padding-y-large');
+    }
+}
+
+@mixin block_padding-y-full {
+    @include block_padding-y-top;
+    @include block_padding-y-bottom;
+}
+
+@mixin block_padding-x-left {
+    padding-left: sget($spacing, 'block-padding-x-small');
+
+    @include breakpoint('for-tablet') {
+        padding-left: sget($spacing, 'block-padding-x-medium');
+    }
+    @include breakpoint('for-desktop') {
+        padding-left: sget($spacing, 'block-padding-x-large');
+    }
+}
+@mixin block_padding-x-right {
+    padding-right: sget($spacing, 'block-padding-x-small');
+
+    @include breakpoint('for-tablet') {
+        padding-right: sget($spacing, 'block-padding-x-medium');
+    }
+    @include breakpoint('for-desktop') {
+        padding-right: sget($spacing, 'block-padding-x-large');
+    }
+}
+@mixin block_padding-x-full {
+    @include block_padding-x-left;
+    @include block_padding-x-right;
+}
+
+
+// @mixin hexagonClipPath1{
+//     clip-path: polygon(50% 0%, 94.5% 25%, 94.5% 75%, 50% 100%, 6.5% 75%, 6.5% 25%);
+// }
+// @mixin hexagonClipPath2{
+//     clip-path: polygon(25% 6.5%, 75% 6.5%, 100% 50%, 75% 94.5%, 25% 94.5%, 0% 50%);
+// }
+
+
+
+// // Maintained in the sGet breakpoints file as I felt it was more of a utility than a style mixin
+//     // @mixin breakpoint($breakpoint){
+//     //     $value: sget( $breakpoints, $breakpoint);
+// //         @media(min-width: $value){
+// //             @content;
+//     //     }
+//     // } 

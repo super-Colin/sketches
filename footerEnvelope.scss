@@ -1,0 +1,461 @@
+
+@import './SC_components/SC_arrow';
+@import './SC_variables/_SC_variables';
+
+$envelopeFooter_input-font-family: 'Opens Sans', sans-serif;
+$envelopeFooter_color-darkShade: sget($color, 'gray-700');
+$envelopeFooter_color-bg: sget($color, 'page-bg');
+$envelopeFooter_color-bottom: sget($color, 'theme-main');
+
+// $envelopeFooter_middleHeight: 5rem;
+$envelopeFooter_middleHeight: 16vw;
+$envelopeFooter_seemSize: 3px;
+
+$envelopeFooter_toTop-boxSize: 20vw;
+
+$breakpoint: new-breakpoint('for-envelopeFooter-stepUp1', sget($breakpoint, 'for-tablet'));
+$breakpoint: new-breakpoint('for-envelopeFooter-stepUp2', sget($breakpoint, 'for-tabletLandscape'));
+$breakpoint: new-breakpoint('for-envelopeFooter-stepUp3', sget($breakpoint, 'for-desktop'));
+$breakpoint: new-breakpoint('for-envelopeFooter-layoutSwitch', sget($breakpoint, 'for-desktop'));
+
+.envelopeFooter_container, .envelopeFooter_container-inner{width: 100%;}
+
+
+.envelopeFooter_container-inner{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.envelopeFooter-top{
+    height: #{$envelopeFooter_middleHeight * 2};
+    @include block_padding-full;
+    background-image: linear-gradient(to bottom, $envelopeFooter_color-darkShade, sget($color, 'theme-main'));
+}
+.envelopeFooter-top-links{
+    display: flex;
+    justify-content: space-between;
+
+    color: sget($color, 'white');
+}
+.envelopeFooter-top-link-link{
+    width: 33%;
+    color: sget($color, 'white');
+    font-size: sget($body, 'font-size-medium');
+}
+.envelopeFooter-top-link-title{
+    font-size: sget($body, 'font-size-large');
+}
+.envelopeFooter-middle{
+    position: relative;
+    margin-top: -20%;
+    padding-top: #{$envelopeFooter_middleHeight * 0.75};
+    height: #{$envelopeFooter_middleHeight * 2};
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.envelopeFooter-middle-bgLeft,
+.envelopeFooter-middle-bgLeft-back,
+.envelopeFooter-middle-bgRight,
+.envelopeFooter-middle-bgRight-back{
+    background-color: $envelopeFooter_color-darkShade;
+    width: 150%;
+    height: 150%;
+
+    position: absolute;
+    top:0;
+    z-index: 2;
+}
+.envelopeFooter-middle-bgLeft-back,
+.envelopeFooter-middle-bgLeft{
+    left: 0;
+    transform-origin: top left;
+    transform: rotate(15deg);
+}
+.envelopeFooter-middle-bgRight-back,
+.envelopeFooter-middle-bgRight{
+    right: 0;
+    transform-origin: top right;
+    transform: rotate(-15deg);
+}
+.envelopeFooter-middle-bgLeft-back,
+.envelopeFooter-middle-bgRight-back{
+    background-color: $envelopeFooter_color-bg;
+    top: #{$envelopeFooter_seemSize * (-1)};
+    z-index: 1;
+}
+
+
+.envelopeFooter-middle-logo{
+    position: relative;
+    z-index: 3;
+}
+.envelopeFooter-middle-logo svg,
+.envelopeFooter-middle-logo img,
+.envelopeFooter-bottom-layoutSwitch-logo svg,
+.envelopeFooter-bottom-layoutSwitch-logo img {
+    display: block;
+    margin: auto;
+    // height: 4rem;
+    height: #{$envelopeFooter_middleHeight * 0.75};
+    width: auto;
+    max-width: 100%;
+}
+
+.envelopeFooter-bottom{
+    position: relative;
+    z-index: 5;
+
+    @include block_padding-full;
+    border-top: $envelopeFooter_seemSize solid $envelopeFooter_color-bg;
+    background-color: $envelopeFooter_color-bottom;
+    text-align: center;
+    // padding-bottom: $envelopeFooter_toTop-boxSize;
+    padding-bottom: #{$envelopeFooter_toTop-boxSize / 2};
+    // margin-bottom: #{$envelopeFooter_toTop-boxSize / 2};
+}
+
+.envelopeFooter-bottom-icons{
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint('for-envelopeFooter-stepUp2') {
+        justify-content: space-around;
+    }
+}
+.envelopeFooter-bottom-icons-icon{
+    width: 3rem;
+    height: 3rem;
+    @include breakpoint('for-envelopeFooter-stepUp1') {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+.envelopeFooter-bottom-icons-icon svg,
+.envelopeFooter-bottom-icons-icon img{
+    max-width: 100%;
+    max-height: 100%;
+    fill: sget($color, 'black');
+}
+
+.envelopeFooter-bottom-content-emailLink{
+    display: inline-block;
+    margin-top: sget($spacing, 'xlarge');
+    margin-bottom: sget($spacing, 'medium');
+
+    color: sget($color, 'black');
+    font-size: sget($body, 'font-size-large');
+    font-weight: 700;
+}
+.envelopeFooter-bottom-form{
+    margin-bottom: $envelopeFooter_toTop-boxSize ;
+}
+
+.envelopeFooter-bottom-form label,
+.envelopeFooter-bottom-form input,
+.envelopeFooter-bottom-form textarea{
+    display: block;
+    text-align: left;
+}
+.envelopeFooter-bottom-form label{
+    margin: sget($spacing, 'xsmall') 0 sget($spacing, 'xxxsmall');
+    font-size: sget($body, 'font-size-medium');
+}
+.envelopeFooter-bottom-form input,
+.envelopeFooter-bottom-form textarea{
+    width: 100%;
+    max-width: 100%;
+    padding: 0.15em 0.3em;
+
+    border: 2px solid sget($color, 'gray-500');
+    // border: 2px solid sget($color, 'black');
+
+    // TODO add box-shadow on focus?? (transition)
+
+    font-size: sget($body, 'font-size-large');
+    font-family: $envelopeFooter_input-font-family;
+}
+.envelopeFooter-bottom-form textarea{
+    min-width: 100%;
+    min-height: 4.5em;
+    height: 5.5em;
+    max-height: 50vh;
+
+    font-size: sget($body, 'font-size-medium');
+}
+
+.envelopeFooter-bottom-form-buttonHolder{
+    height: $envelopeFooter_toTop-boxSize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: $envelopeFooter_toTop-boxSize;
+    left: 0;
+    bottom: 0;
+    // margin-top: #{$envelopeFooter_toTop-boxSize / 2};
+}
+.envelopeFooter-bottom-form-submit{
+    // margin-top: #{$envelopeFooter_toTop-boxSize / 2};
+    height: 75%;
+    width: 50%;
+
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: sget($body, 'font-size-large');
+    cursor: pointer;
+    @include breakpoint('for-envelopeFooter-stepUp1') {
+        height: 50%;
+        width: 40%;
+        // background-color: green;
+    }
+    @include breakpoint('for-envelopeFooter-stepUp2'){
+        // background-color: blue;
+        width: 33%;
+    }
+    @include breakpoint('for-envelopeFooter-layoutSwitch'){
+        // background-color: purple;
+        height: 40%;
+        width: 20%;
+    }
+}
+
+.envelopeFooter-bottom-layoutSwitch{
+    display: none;
+}
+
+.envelopeFooter-bottom-toTop{
+    width: $envelopeFooter_toTop-boxSize;
+    height: $envelopeFooter_toTop-boxSize;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: $envelopeFooter_color-bg;
+    color: sget($color,'black'); 
+    cursor: pointer;
+}
+html{scroll-behavior: smooth;}
+
+.envelopeFooter-bottom-toTop-top {
+    margin-top: sget($spacing, 'xxxsmall');
+    @include breakpoint('for-envelopeFooter-stepUp1') {
+        .envelopeFooter-bottom-toTop-top {
+            margin-top: sget($spacing, 'xxsmall');
+        }
+    }
+}
+
+@include breakpoint('for-envelopeFooter-stepUp1'){
+
+// Make toTop box and related properties smaller
+    $envelopeFooter_toTop-boxSize: 13vw;
+    
+    .envelopeFooter-bottom-form-buttonHolder {
+        height: $envelopeFooter_toTop-boxSize;
+        right: $envelopeFooter_toTop-boxSize;
+    }
+    .envelopeFooter-bottom-toTop {
+        width: $envelopeFooter_toTop-boxSize;
+        height: $envelopeFooter_toTop-boxSize;
+    }
+    .envelopeFooter-bottom-form{
+        margin-bottom: $envelopeFooter_toTop-boxSize;
+    }
+// -------------------
+
+// middle and top section height
+    $envelopeFooter_middleHeight: 15vw;
+
+    .envelopeFooter-top {
+        height: #{$envelopeFooter_middleHeight * 2};
+    }
+    .envelopeFooter-middle {
+        position: relative;
+        padding-top: #{$envelopeFooter_middleHeight * 0.75};
+        height: #{$envelopeFooter_middleHeight * 2};
+    }
+    .envelopeFooter-middle-logo svg,
+    .envelopeFooter-middle-logo img {
+        height: #{$envelopeFooter_middleHeight * 0.75};
+    }
+
+// -------------------
+
+
+// --
+}
+$envelopeFooter_toTop-boxSize: 10vw;
+$envelopeFooter_middleHeight: 13vw;
+@include breakpoint('for-envelopeFooter-stepUp2'){
+
+// Make toTop box and related properties smaller
+    // $envelopeFooter_toTop-boxSize: 10vw;
+    
+    .envelopeFooter-bottom-form-buttonHolder {
+        height: $envelopeFooter_toTop-boxSize;
+        right: $envelopeFooter_toTop-boxSize;
+    }
+    .envelopeFooter-bottom-toTop {
+        width: $envelopeFooter_toTop-boxSize;
+        height: $envelopeFooter_toTop-boxSize;
+    }
+    .envelopeFooter-bottom-form{
+        margin-bottom: $envelopeFooter_toTop-boxSize;
+    }
+// -------------------
+
+// middle and top section height
+    $envelopeFooter_middleHeight: 13vw;
+
+    .envelopeFooter-top {
+        height: #{$envelopeFooter_middleHeight * 2};
+    }
+    .envelopeFooter-middle {
+        position: relative;
+        padding-top: #{$envelopeFooter_middleHeight * 0.75};
+        height: #{$envelopeFooter_middleHeight * 2};
+        padding-bottom: #{$envelopeFooter_middleHeight * 0.1};
+        align-items: flex-end;
+    }
+    .envelopeFooter-middle-logo svg,
+    .envelopeFooter-middle-logo img {
+        height: #{$envelopeFooter_middleHeight * 0.75};
+    }
+// -------------------
+
+
+// --
+}
+$envelopeFooter_seemSize: 5px;
+$envelopeFooter_middleHeight: 12vw;
+$envelopeFooter_toTop-boxSize: 15vw;
+$envelopeFooter_toTop-box-height: #{$envelopeFooter_toTop-boxSize * 0.66};
+@include breakpoint('for-envelopeFooter-layoutSwitch') {
+
+// -------------------
+
+// Make toTop box and related properties smaller
+    // $envelopeFooter_toTop-boxSize: 10vw;
+    
+    .envelopeFooter-bottom-form-buttonHolder {
+        height: $envelopeFooter_toTop-box-height;
+        right: $envelopeFooter_toTop-boxSize;
+    }
+    .envelopeFooter-bottom-toTop {
+        width: $envelopeFooter_toTop-boxSize;
+        height: $envelopeFooter_toTop-box-height;
+    }
+    .envelopeFooter-bottom-form{
+        margin-bottom: $envelopeFooter_toTop-boxSize;
+    }
+// -------------------
+
+// middle and top section height
+    // $envelopeFooter_middleHeight: 13vw;
+
+    .envelopeFooter-top {
+        height: #{$envelopeFooter_middleHeight * 2.2};
+    }
+    .envelopeFooter-middle {
+        position: relative;
+        padding-top: #{$envelopeFooter_middleHeight * 0.75};
+        height: #{$envelopeFooter_middleHeight * 1.75};
+        padding-bottom: #{$envelopeFooter_middleHeight * 0.1};
+        align-items: flex-end;
+    }
+    .envelopeFooter-middle-logo svg,
+    .envelopeFooter-middle-logo img {
+        height: #{$envelopeFooter_middleHeight * 0.75};
+    }
+// -------------------
+
+// Switch layout
+
+    .envelopeFooter-middle-bgLeft-back,
+    .envelopeFooter-middle-bgRight-back {
+        top: #{$envelopeFooter_seemSize * (-1)};
+    }
+
+    .envelopeFooter-middle-logo{
+        display: none;
+    }
+    .envelopeFooter-bottom{
+        display: flex;
+        flex-direction: row-reverse;
+        border-top: none;
+        padding-right: $envelopeFooter_toTop-boxSize;
+    }
+    .envelopeFooter-bottom::before{
+        content:'';
+        display: block;
+        height: $envelopeFooter_seemSize;
+
+        position:absolute;
+        top: 0;
+        left: 0;
+        right: $envelopeFooter_toTop-boxSize;
+
+        background-color: $envelopeFooter_color-bg;
+    }
+    .envelopeFooter-bottom-content{
+        width: 100%;
+    }
+    .envelopeFooter-bottom-content-emailLink{
+        margin: sget($spacing, 'medium') auto;
+        font-size: sget($heading, 'font-size-small');
+    }
+    .envelopeFooter-bottom-icons {
+        flex-direction: column;
+        margin: 0 sget($spacing, 'large');
+    }
+    .envelopeFooter-bottom-form{
+        margin-bottom: #{$envelopeFooter_toTop-boxSize * 0.5};
+    }
+
+    .envelopeFooter-bottom-layoutSwitch{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: $envelopeFooter_toTop-box-height;
+        width: $envelopeFooter_toTop-boxSize;
+        padding: sget($spacing, 'large');
+
+        background-color: $envelopeFooter_color-darkShade;
+        border-left: $envelopeFooter_seemSize solid $envelopeFooter_color-bg;
+    }
+    .envelopeFooter-bottom-layoutSwitch-logo img{
+        height: auto;
+        width: 100%;
+    }
+
+    .envelopeFooter-bottom-toTop {
+        // width: $envelopeFooter_toTop-boxSize;
+        // height: $envelopeFooter_toTop-box-height;
+    }
+    .envelopeFooter-bottom-toTop-top{
+        font-size: sget($body, 'font-size-xlarge');
+    }
+
+
+
+
+
+// --
+}
+
+

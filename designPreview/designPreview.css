@@ -1,0 +1,237 @@
+.designPreview_container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.designPreview_mobile-phoneFrame,
+.designPreview_content-desktopFrame {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.designPreview_container {
+  background-color: #adb5bd;
+  margin-top: 3.1rem;
+  margin-bottom: 3.1rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+@media (min-width: 600px) {
+  .designPreview_container {
+    margin-top: 3.1rem;
+  }
+}
+@media (min-width: 1180px) {
+  .designPreview_container {
+    margin-top: 3.1rem;
+  }
+}
+@media (min-width: 600px) {
+  .designPreview_container {
+    margin-bottom: 3.1rem;
+  }
+}
+@media (min-width: 1180px) {
+  .designPreview_container {
+    margin-bottom: 3.1rem;
+  }
+}
+@media (min-width: 600px) {
+  .designPreview_container {
+    padding-top: 1.8rem;
+  }
+}
+@media (min-width: 1180px) {
+  .designPreview_container {
+    padding-top: 2.4rem;
+  }
+}
+@media (min-width: 600px) {
+  .designPreview_container {
+    padding-bottom: 1.8rem;
+  }
+}
+@media (min-width: 1180px) {
+  .designPreview_container {
+    padding-bottom: 2.4rem;
+  }
+}
+
+.designPreview_innerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+@media (min-width: 1180px) {
+  .designPreview_innerContainer {
+    max-width: 94vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1760px) {
+  .designPreview_innerContainer {
+    max-width: 85vw;
+  }
+}
+@media (min-width: 900px) {
+  .designPreview_innerContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.designPreview_mobile {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .designPreview_mobile {
+    justify-content: center;
+  }
+}
+
+.designPreview_mobile-heading {
+  margin-bottom: 1.8rem;
+}
+@media (min-width: 900px) {
+  .designPreview_mobile-heading {
+    display: none;
+  }
+}
+
+.designPreview_mobile-phoneFrame {
+  display: inline-block;
+  padding: 1.8rem 1rem;
+  background-color: #495057;
+  border-radius: 20px;
+  min-width: 240px;
+  max-width: 100%;
+}
+@media (min-width: 900px) {
+  .designPreview_mobile-phoneFrame {
+    margin-right: 1.4rem;
+  }
+}
+
+.designPreview_mobile-phoneFrame img {
+  height: auto;
+  min-width: 240px;
+  max-width: 100%;
+}
+
+.designPreview_content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .designPreview_content {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1180px) {
+  .designPreview_content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.designPreview_content-title {
+  display: none;
+}
+@media (min-width: 900px) {
+  .designPreview_content-title {
+    display: block;
+  }
+}
+
+.designPreview_content-body {
+  margin: 1.8rem 0;
+}
+
+.designPreview_content-desktopFrame {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #495057;
+  border-radius: 6px;
+}
+
+.designPreview_content-desktopFrame img {
+  max-height: 500px;
+  width: auto;
+}
+@media (min-width: 900px) {
+  .designPreview_content-desktopFrame img {
+    max-height: 60vw;
+  }
+}
+
+@media (min-width: 1180px) {
+  .designPreview_content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .designPreview_content-title {
+    width: 100%;
+    margin-bottom: 3.1rem;
+    font-size: 2.5rem;
+  }
+
+  .designPreview_content-title-heading .designPreview_content-body,
+.designPreview_content-desktopFrame {
+    margin: 0;
+  }
+
+  .designPreview_content-body {
+    width: 30%;
+  }
+
+  .designPreview_content-desktopFrame {
+    width: 68%;
+  }
+}
+.angledTitle {
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  position: relative;
+  background-color: #444;
+  color: white;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.angledTitle::before,
+.angledTitle::after {
+  display: block;
+  content: "";
+  width: 2vw;
+  height: 500%;
+  transform-origin: 0% 70%;
+  transform: rotate(-60deg);
+  position: absolute;
+  right: 10vw;
+  bottom: 0;
+  background-color: #adb5bd;
+}
+
+.angledTitle::before {
+  bottom: -150%;
+  background-color: #ED6C25;
+}
+
+.angledTitle::after {
+  transform-origin: bottom left;
+  width: 20vw;
+  right: -20vw;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=designPreview.css.map */

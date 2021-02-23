@@ -1,0 +1,8 @@
+// Mixins
+
+// Make element invisible to the screen and no longer effect page flow,
+// but leave content accessible to screen reader 
+@mixin accessibleDisplayNone{
+    display: none;
+    clip-path: 1px 1px;
+}

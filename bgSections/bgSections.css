@@ -1,0 +1,86 @@
+@import '../SC_globals.css';
+
+.fullBg_container{
+    width: 100%;
+}
+.fullBg_section{
+    height: 100vh;
+    /* height: 100vh; */
+    /* max-height: 100vh; */
+    position: relative;
+        position: sticky;
+        top: 0;
+}
+.fullBg_section-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--brand_color-orange1-light);
+    transition: background-color 1.5s;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.fullBg_section:nth-of-type(2) .fullBg_section-bg {
+    background-color: var(--brand_color-orange1);
+}
+.fullBg_section:nth-of-type(3) .fullBg_section-bg {
+    background-color: var(--brand_color-blue1-light);
+}
+.fullBg_section:nth-of-type(4) .fullBg_section-bg {
+    background-color: var(--brand_color-blue1);
+}
+.fullBg_section:nth-of-type(5) .fullBg_section-bg {
+    background-color: var(--brand_color-blue1-dark);
+}
+.fullBg_section-bg-title{
+    position: sticky;
+    top: 40%;
+    bottom:40%;
+    margin-left: 10vw;
+
+    font-size: 14vh;
+    color: rgba(0,0,0, 0.5);
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.25);
+}
+.fullBg_section-bg-title-1{
+
+}
+.fullBg_section-bg-title-2{
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+}
+.fullBg_section-content{
+    position: relative;
+    padding: var(--global_spacing-large) var(--global_spacing-gutters);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+}
+.fullBg_section-content-title{
+    margin-bottom: var(--global_spacing-large);
+}
+.fullBg_section-content-p{
+    margin-top: var(--global_spacing-medium);
+}
+.fullBg_section-content-quote{
+    display: block;
+    margin-top: var(--global_spacing-large);
+
+    font-size: var(--global_fontSize-body-large);
+    text-align: center;
+}
+
+@media(min-width: 600px){
+
+}

@@ -1,0 +1,165 @@
+
+    $ms-squares-total: 10;
+    $ms-square-distance: 100 / $ms-squares-total;
+
+    $ms-squares-verticalOverlap: 6;
+    $ms-square-height: $ms-square-distance * $ms-squares-verticalOverlap;
+    $ms-square-width: 15%;
+
+    $ms-sqaures-delay: 0.15;
+    $ms-sqaures-duration: 6;
+
+    $ms-radius: 20px;
+
+    $ms-color-bg: black;
+    $ms-color-bg-accent: #220d20;
+    $ms-color1: rgba(33, 255, 230, 0.5);
+    $ms-color2: rgba(250, 230, 22, 0.75);
+    $ms-color3: rgba(240, 20, 200, 0.5);
+
+    // $ms-color1: rgba(110, 5, 150, 0.5);
+    // $ms-color2: rgba(240, 150, 22, 0.75);
+    // $ms-color3: rgba(30, 20, 200, 0.5);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.movingSquares_container{
+    height: 100vh;
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+
+    background-color: $ms-color-bg;
+    background-image: linear-gradient(
+            to bottom, 
+            $ms-color-bg 0%, 
+            $ms-color-bg-accent 20%, 
+            $ms-color-bg-accent 80%, 
+            $ms-color-bg 100%
+        );
+}
+.movingSquares_content{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: $ms-square-width ;
+    right: $ms-square-width;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+.movingSquares_content *{max-width: 100%;}
+.movingSquares_content-title::before{
+
+    display: block;
+    opacity: 0.5;
+    color: $ms-color-bg;
+    color: $ms-color-bg-accent;
+    content:'';
+    animation-name: changeContent;
+    animation-duration: #{$ms-sqaures-duration * 4s};
+    animation-iteration-count: infinite;
+}
+.movingSquare_square{
+    width: $ms-square-width;
+    height: #{$ms-square-height * 1%};
+
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+
+    animation-name: moveSide;
+    animation-duration: #{$ms-sqaures-duration * 1s};
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    // border-top: 4px solid rgba(0, 0, 0, 0.04);
+    // border-bottom: 4px solid rgba(0, 0, 0, 0.25);
+    border-top: 4px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.25);
+    background-image: linear-gradient(to right, $ms-color1, $ms-color2, $ms-color3);
+    background-size: 400% 400%;
+}
+
+
+@for $i from 1 through $ms-squares-total{
+    .movingSquare_square-#{$i} {
+        top:  #{$i * $ms-square-distance * 1%};
+        animation-delay: #{$i * $ms-sqaures-delay * -1s};
+        // animation-duration: $ms-sqaures-duration;
+    }
+}
+
+
+
+@keyframes changeContent{
+    0% {content: 'Super Colin';}
+    22%{content: 'Super Colin';}
+    47%{content: 'Determination';}
+    72%{content: 'Creativity';}
+    97%{content: 'Ingenuity';}
+    100%{content: 'Ingenuity';}
+}
+@keyframes moveSide{
+    0% {
+        left: 0%;
+        width: $ms-square-width;
+        background-position: -15% 0%;
+        // border-radius: 0 $ms-radius $ms-radius 0;
+        border-radius: 0;
+        opacity: 30%;
+    }
+    10% {
+        background-position: 0% 0%;
+    }
+    25% { 
+        left: $ms-square-width;
+        width: $ms-square-width;
+        background-position: 25% 0%;
+        border-radius: 0 $ms-radius $ms-radius 0;
+        // opacity: 100%;
+    }
+    50% {
+        left: $ms-square-width;
+        width: #{100% - ($ms-square-width * 2) };
+        background-position: 50% 0%;
+        border-radius: 0;
+        opacity: 100%;
+    }
+    75% { 
+        left: #{100% - ($ms-square-width * 2)};
+        width: $ms-square-width;
+        background-position: 75% 0%;
+        border-radius: $ms-radius 0 0 $ms-radius;
+        // opacity: 100%;
+    }
+    90% {
+        background-position: 100% 0%;
+    }
+    100% {
+        left: #{100% - $ms-square-width};
+        width: $ms-square-width;
+        background-position: 115% 0% ;
+        // border-radius: $ms-radius 0 0 $ms-radius;
+        border-radius: 0;
+        opacity: 30%;
+    }
+}
+
+
+
+
+
+

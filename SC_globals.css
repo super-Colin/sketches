@@ -1,0 +1,288 @@
+body.darkMode-active {
+  /* reverse the dark and light colors */
+  --brand_color-darkAccent1: #EFAF5E;
+  --brand_color-lightAccent1: #B9514A;
+  --brand_color-darkShade1: #F2ECE7;
+  --brand_color-lightShade1: #392E42; }
+
+:root {
+  /* font-size: 16px; */
+  /* font-size: calc(15px + 1vw); */
+  /* font-size: calc(3.89vw + 2.5px);16px at 360px VW */
+
+
+
+  /* ======== Brand Vars ======== */
+
+  /* ==-- Fonts --== */
+  /* Import Link and  Available Fonts*/
+  /* 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
+  */
+  --brand_fontFamily-title: 'Oswald', sans-serif;
+  --brand_fontWeight-title-main: 500;
+  --brand_fontFamily-body: 'Roboto', sans-serif;
+  --brand_fontWeight-body-main: 400;
+  --brand_fontFamily-accent: 'Montserrat', sans-serif;
+  --brand_fontWeight-accent-main: 400;
+
+  /* ==-- Colors --== */
+  /* Colors have a switchable for dark mode compatibility */
+
+  --brand_color-lightShade1-switchable: #F2ECE7;
+  --brand_color-lightShade1: #F2ECE7;
+  /* Light shades
+    Use this color as the background for your dark-on-light designs,
+    or the text color of an inverted design. */
+
+  --brand_color-lightAccent1-switchable: #EFAF5E;
+  --brand_color-lightAccent1: #EFAF5E;
+  /* Light accent
+    Accent colors can be used to bring attention to design elements 
+    by contrasting with the rest of the palette. */
+
+  --brand_color-main1-switchable: #ED6C25;
+  --brand_color-main1: #ED6C25;
+
+
+  --brand_color-orange1: #ED6C25;
+  --brand_color-orange1-light: #EFAF5E;
+  --brand_color-blue1: #2AA187;
+  --brand_color-blue1-light: #6FCF97;
+  --brand_color-blue1-dark: #09363A;
+
+
+  /* Main brand color
+    This color should be eye-catching but not harsh.
+    It can be liberally applied to your layout as its main identity. */
+
+  --brand_color-darkAccent1-switchable: #99312A;
+  --brand_color-darkAccent1: #99312A;
+  /* Dark accent
+    Another accent color to consider.
+    Not all colors have to be used - sometimes a simple color scheme works best. */
+
+  /* --brand_color-darkShade1-switchable: #392E42; */
+  --brand_color-darkShade1-switchable: #220d20;
+  --brand_color-darkShade1: #220d20;
+  /* Dark shades
+    Use as the text color for dark-on-light designs, 
+    or as the background for inverted designs. */
+
+
+
+  /* ======== Globals ======== */
+
+    /* ==-- Fonts --== */  
+  --global_fontSize-body-xsmall: .6rem;
+  --global_fontSize-body-small: .75rem;
+  --global_fontSize-body-medium: 1rem;
+  --global_fontSize-body-large: 1.2rem;
+  --global_fontSize-body-xlarge: 1.35rem;
+
+  --global_fontSize-title-xsmall: 1.4rem;
+  --global_fontSize-title-small: 1.6rem;
+  --global_fontSize-title-medium: 1.8rem;
+  --global_fontSize-title-large: 2.5rem; 
+  --global_fontSize-title-xlarge: 2.5rem;
+
+    /* ==-- Timing --== */
+  --global_timing-transitionDuration-small: .4s;
+  --global_timing-transitionDuration-medium: 0.9s;
+  --global_timing-transitionDuration-large: 1.4s;
+
+    /* ==-- Spacing --== */
+
+    --global_spacing-xsmall: .45rem;
+  /* smaller spacing is best for a small, subtle nudge on something */
+  --global_spacing-small: .7rem;
+  /* small spacing is for good for spacing under a small h tag (h3-ish) */
+  --global_spacing-medium: 1.2rem;
+  /* medium spacing is your go to for most padding and margins */
+  --global_spacing-large: 2rem;
+  /* large spacing are more for vertical spacing(margin) from block to block or large titles */
+  --global_spacing-xlarge: 2.6rem;
+  /* xlarger spacing are more for vertical spacing(margin) from section to section */
+  --global_spacing-xxlarge: 3.2rem;
+  --global_spacing-xxxlarge: 3.6rem;
+  /* largest spacing is more for vertical spacing(margin) where you want a lot of white space */
+  --global_spacing-gutters: 0.8rem;
+  /* padding for the side of the page */
+  --global_spacing-owl: 1.3em;
+  /* Lobotomized owl spacing for easy dynamic margin-top */
+  /* ==-- sizing --== */
+  --global_sizing-borderthickness: 2px;
+
+    /* ==-- Colors --== */
+  --global_color-sucess: #2d2;
+  --global_color-warning: #d62;
+  --global_color-danger: #d22;
+
+  --global_color-white1: #eee;
+  --global_color-lightGray1: #ccc;
+  --global_color-midLightGray1: #aaa;
+  --global_color-gray1: #888;
+  --global_color-midDarkGray1: #666;
+  --global_color-darkGray1: #444;
+  --global_color-black1: #111;
+
+/* 
+  --breakpoint_for-tablet:600px;
+  --breakpoint_for-tabletlandscape:900px;
+  --breakpoint_for-desktop:1180px;
+  --breakpoint_for-desktop4k:1760px; */
+
+}
+.darkMode-active {
+  --brand_color-lightShade1-switchable: var(--brand_color-darkShade1-switchable);
+  --brand_color-lightAccent1: var(--brand_color-darkAccent1-switchable);
+  --brand_color-darkAccent1: var(--brand_color-lightAccent1-switchable);
+  --brand_color-darkShade1: var(--brand_color-lightShade1-switchable);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit; }
+
+html,
+body {
+  max-width: 100vw;
+  background-color: var(--brand_color-darkShade1);
+  color: var(--brand_color-lightShade1);
+  font-family: var(--brand_fontFamily-body);
+  font-weight: var(--brand_fontFamily-body-main);
+  font-size: var(--global_fontSize-body-medium); }
+
+/* body > * + * {margin-top: var(--global_spacing-owl); } */
+
+header {margin-top: 0; }
+
+img {max-width: 100%; }
+
+li {list-style: none; }
+
+/* a{text-decoration: none;} */
+
+.sc-title {
+  font-family: var(--brand_fontFamily-title);
+  font-weight: var(--brand_fontWeight-title-main); 
+}
+
+.sc-accent {
+  font-family: var(--brand_fontFamily-accent);
+  font-weight: var(--brand_fontWeight-accent-main); 
+}
+
+.sc-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.sc-hexagon,
+.sc-hexagon::before,
+.sc-hexagon::after {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 0.288em;
+  height: 0.5em;
+  /* margin-right:var(--global_spacing-small); */
+  margin-right: 0.6em;
+  background-color: var(--brand_color-main1-switchable); }
+
+.sc-hexagon::before,
+.sc-hexagon::after {
+  transform-origin: center center;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+
+.sc-hexagon::before {
+  transform: rotate(120deg); }
+
+.sc-hexagon::after {
+  transform: rotate(-120deg); }
+
+.sc-button {
+  border: none;
+  border-radius: 0.2em;
+  transform: perspective(500px) translate3d(0);
+  transition: border-radius var(--global_timing-transitionDuration-small), transform var(--global_timing-transitionDuration-small), box-shadow var(--global_timing-transitionDuration-small); }
+
+.sc-button:hover {
+  box-shadow: 0 0 10px 2px rgba(44, 44, 44, 0.7);
+  transform: perspective(500px) translate3d(0, 0, 5rem);
+  border-radius: 0.4em; }
+
+.sc-hr {
+  width: 100%;
+  height: 2px; }
+
+.sc-hr::after {
+  content: "";
+  display: block;
+  width: var(--global_spacing-larger);
+  height: 2px;
+  background-color: var(--brand_color-darkShade1);
+  margin: 0 auto; }
+
+.sc-whiteLink {
+  color: var(--brand_color-lightShade1); }
+
+.sc-lightLink {
+  color: var(--brand_color-lightAccent1); }
+
+.sc-darkLink {
+  color: var(--brand_color-darkAccent1); }
+
+.sc-blackLink {
+  color: var(--brand_color-darkShade1); }
+
+  /* --breakpoint_for-tablet:600px;
+  --breakpoint_for-tabletlandscape:900px;
+  --breakpoint_for-desktop:1180px;
+  --breakpoint_for-desktop4k:1760px; */
+
+@media(min-width: 600px ) {
+    html,
+    body,
+    :root{
+            /* ==-- sizing --== */
+        --global_sizing-borderthickness: 3px;
+        --global_spacing-gutters: 1.6rem;
+    }
+}
+
+@media(min-width: 900px) {
+    html,
+    body,
+    :root{
+            /* ==-- sizing --== */
+        --global_spacing-gutters: 2.2rem;
+    }
+}
+
+@media(min-width: 1180px) {
+    html,
+    body,
+    :root{
+        font-size: calc(11px + 0.5vw);
+        font-size: calc(13px + 0.25vw);
+            /* ==-- sizing --== */
+        --global_spacing-gutters: 2.6rem;
+    }
+}
+@media(min-width: 1760px ) {
+
+    html,
+    body,
+    :root {
+        /* ==-- sizing --== */
+        --global_spacing-gutters: 4rem;
+    }
+}
+

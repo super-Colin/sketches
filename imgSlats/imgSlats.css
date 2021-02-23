@@ -1,0 +1,55 @@
+@import '../SC_globals.css';
+html,
+body{
+    background-color: white;
+}
+
+.imgSlats_container{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.imgSlats_bg-wrapper,
+.imgSlats_bg-img,
+.imgSlats_slats-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.imgSlats_bg-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.imgSlats_bg-img{
+    display: block;
+    object-fit: cover;
+}
+.imgSlats_slats-wrapper{
+    display: flex;
+
+}
+.imgSlats_slats-img1,
+.imgSlats_slats-img2{
+    display: block;
+    width: 50%;
+}
+.imgSlats_slats-img1{
+    object-position: -50px 10px;
+}
+.imgSlats_slats-img2{
+    object-position: 50px 20px;
+}
+
+/* 
+Taphthartharath
+t 4
+a 4
+r 2 
+p 1
+h 4
+
+Tap hth art har ath
+Hta rah tra hth pat
+ */

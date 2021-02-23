@@ -1,0 +1,94 @@
+.headerBump_container {
+  height: 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+  overflow: hidden;
+  transition: background 1s;
+}
+
+.headerBump_container > a {
+  z-index: 11;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.headerBump_container::before,
+.headerBump_container::after {
+  display: block;
+  content: "";
+  background: #ED6C25;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 10%;
+  transition: background 1s;
+  z-index: 3;
+}
+
+.headerBump_container::after {
+  height: 90%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.headerBump_container:hover::before {
+  background: white;
+}
+
+.headerBump_container:hover::after {
+  background: black;
+}
+
+.headerBump_bump {
+  background-color: black;
+  min-width: 60px;
+  width: 10vw;
+  position: relative;
+  z-index: 10;
+}
+
+.headerBump_bump::before,
+.headerBump_bump::after {
+  height: 50px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 150%;
+  width: 100%;
+  background-color: black;
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+}
+
+.headerBump_bump::after {
+  left: unset;
+  right: 0;
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
+
+.headerBump_bump-link {
+  height: 50px;
+}
+
+.headerBump_bump-link img {
+  max-height: 100%;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  padding: 4px 0;
+  position: relative;
+  z-index: 10;
+}
+
+/*# sourceMappingURL=headerBump.css.map */

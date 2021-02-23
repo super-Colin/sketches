@@ -1,0 +1,35 @@
+
+// Z-index is important enough I wanted to have an overview of them all
+
+$zindex: (
+        'imageOverlay-tint':        10,
+        'imageOverlay-info':        50,
+
+        'ui-sticky':                1100,
+        'ui-fixed':                 1200,
+        'ui-dropdown':              1300,
+        'ui-nav':                   1400,
+        'ui-tooltip':               1601,
+
+        'modal-bg':                 1500,
+        'modal-container':          1600
+)
+    
+
+// // a tint over an image that is still just part of the page
+// $zindex-imageOverlay-tint: 10;
+// $zindex-imageOverlay-info: 15;
+
+
+// $zindex-sticky: 1100;
+// $zindex-modal-backdrop: 1300;
+// $zindex-modal-: 1300;
+// $zindex-menu: 1500;
+
+// $zindex-dropdown: 1000 !default;
+// $zindex-sticky: 1020 !default;
+// $zindex-fixed: 1030 !default;
+// $zindex-modal-backdrop: 1040 !default;
+// $zindex-modal: 1050 !default;
+// $zindex-popover: 1060 !default;
+// $zindex-tooltip: 1070 !default;

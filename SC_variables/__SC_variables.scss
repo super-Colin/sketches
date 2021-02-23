@@ -1,0 +1,20 @@
+// Globals
+@import './theme';
+@import './boilerplate/_boilerplate_variables';
+@import './mixins';
+// @import './classes';
+
+
+// sget is the same as map-get so you can use a find and replace
+// but throws an error when the variable isn't found instead of returning null
+// if the map does not exist you will get: "Error: Undefined variable."
+@function sget($variablesMap, $key){
+    $returnVar: map-get($variablesMap, $key);
+    @if $returnVar == null{
+        @error 'Property: #{$key} was not found';
+        // @error ' in map #{$variablesMap}';
+    } @else{
+        @return $returnVar;
+    }
+}
+

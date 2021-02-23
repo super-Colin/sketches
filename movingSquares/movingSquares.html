@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./movingSquares.css">
+</head>
+<body>
+<!-- TIPS TO MY PAST SELF (! BLOG?) -->
+
+    <section class="movingSquares_container">
+        <div class="movingSquares_content">
+            <h2 class="movingSquares_content-title"></h2> <br />
+            <img src="../imgs/sc-diamond.png" alt="">
+        </div>
+
+        <script>
+            function makeMovingSquares(){
+                const numberOfSquares = 10;
+                const parentElem = document.querySelector('.movingSquares_container');
+                let i = 0;
+
+                while (i < numberOfSquares) {
+                    parentElem.innerHTML += '<div class="movingSquare_square movingSquare_square-' + i + '"></div>'
+                    i++;
+                } 
+            }
+            makeMovingSquares();
+        </script>
+        
+
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+// Classes
+
+.bg-theme {
+    background-color: map-get($color, 'theme-main');
+}
+.color-theme {
+    color: map-get($color, 'theme-main');
+}
+.color-light {
+    color: map-get($color, 'white');
+}
+
+.title {
+    // font-family: $brand_fontfamily-title-main;
+    font-family: map-get($heading, 'font-family-main');
+}
+
+// .link {
+//     cursor: pointer;
+//     color: var(--brand_color-link1);
+//     text-decoration: underline;
+// }
+
+
+.full-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+// .hexagon{
+//     @include hexagonClipPath1;
+// }

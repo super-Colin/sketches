@@ -1,0 +1,45 @@
+
+// Kept global for breakpoint mixin
+$breakpoint:(
+    'for-tablet':600px,
+    'for-tabletLandscape':900px,
+    'for-desktop':1180px,
+    'for-desktop4k':1760px
+);
+
+
+
+
+
+// Turn media queries into mixins based on these ^ variables
+// https://www.sitepoint.com/managing-responsive-breakpoints-sass/
+@mixin breakpoint($newBreakpoint){
+    $value: map-get( $breakpoint, $newBreakpoint);
+    @if $value != null{
+        @media(min-width: $value){
+            @content;
+        }
+    }
+    @else{
+        @warn "Unfortunately, no value could be retrieved from #{$newBreakpoint}. " + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+// A function to add breakpoints to this array
+@function new-breakpoint($breakpointName, $breakpointValue){
+    $newBreakpoint: ($breakpointName : $breakpointValue);
+    $breakpoint: map-merge($newBreakpoint, $breakpoint);
+    @return $breakpoint;
+}
+
+
+// used like so:
+
+// $breakpoint : new-breakpoint('for-expandPoint', map-get($breakpoint, 'for-tabletLandscape'));
+
+// .ZrandomComponent{
+//     width: auto;
+//     @include breakpoint('for-expandPoint'){width:50%;}
+//     @include breakpoint('for-tabletLandscape'){width:75%;}
+//     @include breakpoint('for-desktop'){width:100%;}
+// }

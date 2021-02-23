@@ -1,0 +1,136 @@
+:root{
+    --ms-width:100vw;
+    --ms-square-width:20%;
+    --ms-square-height:10%;
+    --ms-square-bg:blue;
+    --ms-color1: #3fd;
+    --ms-color2: #fe2;
+    --ms-color3: #f2a;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.movingSquares_container{
+    height: 100vh;
+    width: var(--ms-width);
+
+    overflow: hidden;
+    position: relative;
+}
+
+.movingSquare_square{
+    width: var(--ms-square-width);
+    height: var(--ms-square-height);
+
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    animation-name: moveSide;
+    /* animation-name: gradient; */
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+
+    background-image: linear-gradient(to right, var(--ms-color1), var(--ms-color2), var(--ms-color3));
+    background-size: 400% 400%;
+    /* background-image: linear-gradient(to right, #3fd, #f2a, #fe2); */
+    /* background-position: -100% 0%; */
+}
+.movingSquare_square-2{
+    top: 5%;
+    animation-duration: 5s;
+}
+.movingSquare_square-3{
+    top: 10%;
+    animation-duration: 3s;
+}
+
+.movingSquare_square:hover{
+    /* left: 50%; */
+    /* width: 100%; */
+    animation-name: moveSide;
+    animation-duration: 3s;
+
+}
+
+.movingSquare_square-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right:0vw;
+    left:0vw;
+
+    /* background-color: teal; */
+    /* background-image: linear-gradient(to right, #3fd, #f2a, #fe2); */
+    /* background-image: linear-gradient(to right, var(--ms-color1), var(--ms-color2)) */
+}
+
+
+
+
+@keyframes moveSide{
+    0% {
+        left: 0%;
+        width: var(--ms-square-width);
+        background-position:0% 0%;
+    }
+    25% { 
+        left: var(--ms-square-width);
+        width: var(--ms-square-width);
+        background-position: 25% 0%;
+    }
+    50% {
+        left: var(--ms-square-width);
+        width: calc(100% - calc(var(--ms-square-width) * 2) );
+        background-position: 50% 0%;
+    }
+    75% { 
+        left: calc(100% - calc(var(--ms-square-width) * 2) );
+        width: var(--ms-square-width);
+        background-position: 75% 0%;
+    }
+    100% {
+        left: calc(100% - var(--ms-square-width));
+        width: var(--ms-square-width);
+        background-position: 100% 0% ;
+    }
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

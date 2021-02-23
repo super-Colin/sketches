@@ -1,0 +1,119 @@
+$brand_color-main2: #2AA187;
+:root {
+    /* font-size: 16px; */
+    /* font-size: calc(15px + 1vw); */
+    font-size: calc(3.89vw + 2.5px);
+    /* 16px at 360px VW */
+
+
+
+    /* ======== Brand Vars ======== */
+
+        /* ==-- Fonts --== */
+    /* Import Link and  Available Fonts*/
+    /* 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
+*/
+    --brand_fontFamily-title: 'Oswald', sans-serif;
+    --brand_fontWeight-title-main: 500;
+    --brand_fontFamily-body: 'Roboto', sans-serif;
+    --brand_fontWeight-body-main: 400;
+    --brand_fontFamily-accent: 'Montserrat', sans-serif;
+    --brand_fontWeight-accent-main: 400;
+
+        /* ==-- Colors --== */
+    /* Colors have a switchable for dark mode compatibility */
+
+    --brand_color-lightShade1-switchable: #F2ECE7;
+    --brand_color-lightShade1: #F2ECE7;
+    /* Light shades
+    Use this color as the background for your dark-on-light designs,
+    or the text color of an inverted design. */
+
+    --brand_color-lightAccent1-switchable: #EFAF5E;
+    --brand_color-lightAccent1: #EFAF5E;
+    /* Light accent
+    Accent colors can be used to bring attention to design elements 
+    by contrasting with the rest of the palette. */
+
+    --brand_color-main2: #2AA187;
+    --brand_color-accent3: #6FCF97;
+    --brand_color-main1-switchable: #ED6C25;
+    --brand_color-main1: #ED6C25;
+    /* Main brand color
+    This color should be eye-catching but not harsh.
+    It can be liberally applied to your layout as its main identity. */
+
+    --brand_color-darkAccent1-switchable: #99312A;
+    --brand_color-darkAccent1: #99312A;
+    /* Dark accent
+    Another accent color to consider.
+    Not all colors have to be used - sometimes a simple color scheme works best. */
+
+    /* --brand_color-darkShade1-switchable: #392E42; */
+    --brand_color-darkShade1-switchable: #220d20;
+    --brand_color-darkShade1: #220d20;
+    $brand_color-main2: #f8c;
+    /* Dark shades
+    Use as the text color for dark-on-light designs, 
+    or as the background for inverted designs. */
+
+
+
+    /* ======== Globals ======== */
+
+        /* ==-- Fonts --== */
+    --global_fontSize-body-xsmall: .6rem;
+    --global_fontSize-body-small: .75rem;
+    --global_fontSize-body-medium: 1rem;
+    --global_fontSize-body-large: 1.2rem;
+    --global_fontSize-body-xlarge: 1.35rem;
+
+    --global_fontSize-title-xsmall: 1.4rem;
+    --global_fontSize-title-small: 1.6rem;
+    --global_fontSize-title-medium: 1.8rem;
+    --global_fontSize-title-large: 2.5rem;
+    --global_fontSize-title-xlarge: 2.5rem;
+
+    /* ==-- Spacing --== */
+    --global_spacing-smaller: .3rem;
+    /* smaller spacing is best for a small, subtle nudge on something */
+    --global_spacing-small: .6rem;
+    /* small spacing is for good for spacing under a small h tag (h3-ish) */
+    --global_spacing-medium: 1.2rem;
+    /* medium spacing is your go to for most padding and margins */
+    --global_spacing-large: 2rem;
+    /* large spacing are more for vertical spacing(margin) from block to block or large titles */
+    --global_spacing-larger: 2.6rem;
+    /* larger spacing are more for vertical spacing(margin) from section to section */
+    /* --global_spacing-owl: var(--global_spacing-medium); */
+    --global_spacing-owl: 1.3em;
+    /* Lobotomized owl spacing for easy dynamic margin-top */
+
+    /* ==-- Colors --== */
+    --global_color-sucess: #2d2;
+    --global_color-warning: #d62;
+    --global_color-danger: #d22;
+
+    --global_color-white1: #eee;
+    --global_color-lightGray1: #ccc;
+    --global_color-midLightGray1: #aaa;
+    --global_color-gray1: #888;
+    --global_color-midDarkGray1: #666;
+    --global_color-darkGray1: #444;
+    --global_color-black1: #111;
+
+        /* ==-- Timing --== */
+    --global_timing-transitionDuration-small: .4s;
+    --global_timing-transitionDuration-medium: 0.9s;
+    --global_timing-transitionDuration-large: 1.4s;
+}
+
+body.darkMode-active {
+        /* reverse the dark and light colors */
+    --brand_color-lightShade1-switchable: var(--brand_color-darkShade1-switchable);
+    --brand_color-lightAccent1: var(--brand_color-darkAccent1-switchable);
+    --brand_color-darkAccent1: var(--brand_color-lightAccent1-switchable);
+    --brand_color-darkShade1: var(--brand_color-lightShade1-switchable);
+}
+

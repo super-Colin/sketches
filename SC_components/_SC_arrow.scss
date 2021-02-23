@@ -1,0 +1,41 @@
+
+$SC_arrow-color-bg: #000;
+$SC_arrow-width:4px;
+$SC_arrow-height:20px;
+
+.SC_arrow-container {}
+
+.SC_arrow {
+    position: relative;
+    height: $SC_arrow-height;
+}
+.SC_arrow,
+.SC_arrow::before,
+.SC_arrow::after{
+    width: $SC_arrow-width;
+    background-color: $SC_arrow-color-bg;
+    border-radius: #{$SC_arrow-width / 2};
+}
+
+.SC_arrow::before,
+.SC_arrow::after {
+    display: block;
+    content: '';
+    height: #{$SC_arrow-height * 0.6};
+
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    transform-origin: center top;
+    transform: rotate(-45deg);
+
+    background-color: $SC_arrow-color-bg;
+}
+.SC_arrow::after{
+    transform: rotate(45deg);
+}
+
+
+
+

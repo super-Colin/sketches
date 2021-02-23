@@ -1,0 +1,13 @@
+:root{
+    --brand_color-main1: #ED6C25;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    font-family: 'Opens Sans', sans-serif;
+}
+a{text-decoration: none;}

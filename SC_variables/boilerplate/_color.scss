@@ -1,0 +1,36 @@
+$global_page-bg: #fff;
+
+$color: (
+    'page-bg':                  $global_page-bg,
+
+    'white':                    #fff,
+    'gray-100':                 #f8f9fa,
+    'gray-200':                 #e9ecef,
+    'gray-300':                 #dee2e6,
+    'gray-400':                 #ced4da,
+    'gray-500':                 #adb5bd,
+    'gray-600':                 #6c757d,
+    'gray-700':                 #495057,
+    'gray-800':                 #343a40,
+    'gray-900':                 #212529,
+    'black':                    #000,
+
+    'muted-light':              rgba(222, 222, 222, 0.9),
+    'muted-dark':               rgba(22, 22, 22, 0.9),
+    'success':                  #00ca19,
+    'warn':                     #ca1930,
+
+    'theme-main':               $theme_color-main,
+    'theme-main-light':         $theme_color-main-light,
+    'theme-main-dark':          $theme_color-main-dark,
+    'theme-accent':             $theme_color-accent,
+
+    'overlay-white-light':      rgba(255, 255, 255, 0.25),
+    'overlay-white-medium':     rgba(255, 255, 255, 0.5),
+    'overlay-white-dark':       rgba(255, 255, 255, 0.75),
+
+    'overlay-black-light':      rgba(0, 0, 0, 0.25),
+    'overlay-black-medium':     rgba(0, 0, 0, 0.5),
+    'overlay-black-dark':       rgba(0, 0, 0, 0.75)
+)
+
