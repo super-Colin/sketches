@@ -1,0 +1,43 @@
+
+
+.overlayTint_container{
+    position: relative;
+}
+
+.overlayTint_bg,
+.overlayTint{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    z-index: 1;
+}
+img.overlayTint_bg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.overlayTint{
+    z-index: 3;
+}
+
+.overlayTint_dark{
+    background-color: rgba(0, 0, 0, 0.66);
+    // background-color: sget($color,'overlay-dark');
+}
+.overlayTint_dark-content{
+    color:sget($color, 'white');
+    @include block_padding-full;
+    position: relative;
+    z-index: 5;
+}
+.overlayTint_light{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.overlayTint_light-content {
+    color: sget($color, 'black');
+    @include block_padding-full;
+    position: relative;
+    z-index: 5;
+}

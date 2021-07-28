@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,  minimum-scale=1">
+  <title>Line Abyss</title>
+
+  <link rel="stylesheet" href="lineAbyss.css">
+</head>
+
+
+
+<script>
+function getElementOffset(el) {
+  const rect = el.getBoundingClientRect();
+
+  return {
+    top: rect.top + window.pageYOffset,
+    left: rect.left + window.pageXOffset,
+  };
+}
+// document.querySelector('#marker1');
+</script>
+
+
+
+<body>
+
+  <div style="margin: 50px;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad, cum voluptas fugit amet cupiditate dolores nam laborum quibusdam dicta voluptate repellat, hic culpa nulla ipsam vitae perferendis distinctio doloremque.</p>
+  </div>
+  <div id="lineAbyss_windowFrame">
+    <div class="lineAbyss_bg"></div>
+    <div id="marker1" style="height:20px; width:20px; background:blue;" ></div>
+
+    <div id="lineAbyss_linesContainer">
+
+
+
+      <div id="marker2" style="height:20px; width:20px; background:purple;" ></div>
+
+
+
+      <script>
+        function makeMovingLines(numberNewOfLines){
+          console.log('make lines running');
+            const numberOfLines = numberNewOfLines;
+            const parentElem = document.querySelector('#lineAbyss_linesContainer');
+            let i = 0;
+
+            while (i < numberOfLines) {
+                parentElem.innerHTML += '<div class="lineAbyss_movingLine lineAbyss_movingLine-' + i + '"></div>'
+                i++;
+            } 
+        }
+        makeMovingLines(20);
+      </script>
+    </div>
+  </div>
+
+
+
+  <div id="line" style="margin-left: 30px;height:300vh; width: 2px; background-color: aqua; opacity: 50%;"></div>
+
+
+  <div style="margin: 50px;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad, cum voluptas fugit amet cupiditate dolores nam laborum quibusdam dicta voluptate repellat, hic culpa nulla ipsam vitae perferendis distinctio doloremque.</p>
+  </div>
+
+</body>
+</html>

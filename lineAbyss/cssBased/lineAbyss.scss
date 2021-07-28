@@ -1,0 +1,160 @@
+@use 'sass:math';
+
+$containerSquareLength: 150vmax;
+$smallOffset: calc(calc(#{$containerSquareLength} - 100vmax) / -2);
+$largeOffset: calc(calc(#{$containerSquareLength} - 100vmin) / -2);
+$numberOfLines: 20;
+
+$containerColors: #E56824;
+$orange: #E56824;
+$abyssColor: #2C2C2C;
+$abyssColor1: $orange;
+$abyssColor2: #db4c14;
+$abyssColor3: rgb(136, 17, 216);
+
+
+#lineAbyss_windowFrame {
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right:0;
+  z-index: -1;
+
+  width: 100vw;
+  height: 100vh;
+  opacity: 100%;
+  // background: purple
+  // background-image: radial-gradient(circle at center, rgba(0, 255, 255, 0), rgba(0, 0, 0, 1) 5%, rgba(0, 255, 255, 1) 10%, rgba(0, 0, 0, 0) 20%);
+}
+#lineAbyss_windowFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#lineAbyss_linesContainer{
+  width: $containerSquareLength;
+  height: $containerSquareLength;
+  position: absolute;
+  top: $smallOffset;
+  left: $largeOffset;
+
+  // background-color: #000;
+  // background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 10%, #000 30%, rgba(255, 255, 255, 0) 40%);
+  opacity: 100%;
+
+  // animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform: rotate(-60deg);
+}
+
+#lineAbyss_linesContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-aspect-ratio: 1.01/1) {
+  #lineAbyss_linesContainer{ //wider than tall (eg mobile first, this is desktop)
+    // background: red ;
+    top: $largeOffset;
+    left: $smallOffset;
+  }
+}
+
+#lineAbyss_container .horizontalAbyss,
+.lineAbyss_bg{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.lineAbyss_movingLine{
+  width: 10px;
+  height: 100%;
+  background-color: $abyssColor;
+  opacity: 75%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  animation-name: moveLine;
+  animation-duration: 20s;
+  animation-timing-function: cubic-bezier(0.825, -0.010, 0.910, 0.330);
+  animation-iteration-count: infinite;
+}
+
+
+.lineAbyss_bg{
+  // background-image: linear-gradient(to top, $abyssColor 2%, $orange 80%);
+  animation-name: changeColor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.lineAbyss_bg::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to top, $abyssColor 2%, rgba(0, 0, 0, 0) 85%)
+}
+
+#lineAbyss_container .horizontalAbyss{
+
+}
+
+// .lineAbyss_bg{background: blue !important;}
+
+
+
+
+
+@keyframes moveLine{
+  0%{left: 0; width: 1px;}
+  100%{left: 100%; width: 8vmax;}
+}
+@keyframes changeColor{
+  0%{background-color: $abyssColor1 }
+  16%{background-color: $abyssColor2 }
+  // 49%{background-color: $abyssColor3 }
+  84%{background-color: $abyssColor3 }
+  100%{background-color: $abyssColor1 }
+}
+
+@keyframes rotate {
+  0%   {transform:rotate(0deg)}
+  // 50%  {transform:rotate(180deg)}
+  100% {transform:rotate(360deg)}
+}
+
+
+@for $i from 1 through $numberOfLines {
+  $percent: math.div(100, $numberOfLines);
+  .lineAbyss_movingLine-#{$i} {
+    animation-delay: $i * (-1s);
+  }
+}
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}

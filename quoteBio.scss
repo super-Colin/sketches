@@ -1,0 +1,27 @@
+
+.quoteBio_container{
+    position: relative;
+    @include block_margin-y-full;
+    // @include block_padding-y-full;
+    overflow: hidden;
+}
+.quoteBio_quote{
+    text-align: center;
+    margin: sget($spacing, 'xxxlarge') 0;
+    // @include block_margin-y-full;
+
+    font-family: $theme_heading-font-family-accent;
+}
+.quoteBio_imgBg img{
+    display: block;
+}
+.quoteBio_imgBg-content{
+    font-family: $theme_body-font-family-mono;
+}
+.quoteBio_imgBg-content p+p{
+    margin-top: 1.3em;
+}
+
+
+
+

@@ -1,0 +1,52 @@
+
+
+
+// Variables that are likely to be adjusted for each new theme
+
+
+
+
+$theme_color-main: #ED6C25;
+$theme_color-main-light: #4E9D19;
+$theme_color-main-dark: #2E502F;
+
+$theme_color-accent: #1A7E13;
+$theme_color-accent-light: #1A7E13;
+$theme_color-accent-dark: #1A7E13;
+
+
+$theme_color-button-light: #1A7E13;
+$theme_color-button-dark: #1A7E13;
+
+// <link rel="preconnect" href="https://fonts.gstatic.com">
+// <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+
+$theme_heading-font-family-main: 'Roboto', sans-serif;
+$theme_heading-font-family-accent: 'Roboto Slab', serif;
+$theme_heading-font-family-mono:'Roboto Mono', monospace;
+
+$theme_heading-font-weight-light: 300;
+$theme_heading-font-weight-main: 400; // Incase your font's normal weight is 500
+$theme_heading-font-weight-bold: 700; // Could be "bold" etc..
+
+
+$theme_body-font-family-main: 'Open Sans', sans-serif;
+$theme_body-font-family-accent: 'Open Sans', sans-serif;
+
+$theme_body-font-weight-light: 300;
+$theme_body-font-weight-main: 400;
+$theme_body-font-weight-bold: 700;
+
+$theme_button-radius:4px; // Also fallback for main button radius
+
+$theme_border-width:2px; 
+
+$theme_spacing-gutter-page: 4vw; 
+
+
+
+// $theme_spacing-block-margin-x-main: $theme_spacing-gutter;
+// $theme_spacing-block-margin-y-main: 10px; // Bigger or smaller?
+
+// $theme_spacing-block-padding-x-main: $theme_spacing-gutter;
+// $theme_spacing-block-padding-y-main: 10px; // Bigger or smaller?

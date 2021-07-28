@@ -1,6 +1,6 @@
 
-// @import './SC_components/SC_arrow';
-// @import './SC_variables/_SC_variables';
+@import './SC_components/SC_arrow';
+@import './SC_variables/_SC_variables';
 
 $envelopeFooter_input-font-family: 'Opens Sans', sans-serif;
 $envelopeFooter_color-darkShade: sget($color, 'gray-700');
@@ -33,14 +33,10 @@ $breakpoint: new-breakpoint('for-envelopeFooter-layoutSwitch', sget($breakpoint,
     background-image: linear-gradient(to bottom, $envelopeFooter_color-darkShade, sget($color, 'theme-main'));
 }
 .envelopeFooter-top-links{
-    // display: flex;
+    display: flex;
     justify-content: space-between;
 
     color: sget($color, 'white');
-    display: none;
-    @include breakpoint('for-envelopeFooter-stepUp1'){
-        display: flex;
-    }
 }
 .envelopeFooter-top-link-link{
     width: 33%;
@@ -48,11 +44,7 @@ $breakpoint: new-breakpoint('for-envelopeFooter-layoutSwitch', sget($breakpoint,
     font-size: sget($body, 'font-size-medium');
 }
 .envelopeFooter-top-link-title{
-    text-align: center;
     font-size: sget($body, 'font-size-large');
-    @include breakpoint('for-envelopeFooter-stepUp2') {
-        font-size: sget($body, 'font-size-xlarge');
-    }
 }
 .envelopeFooter-middle{
     position: relative;
@@ -128,7 +120,6 @@ $breakpoint: new-breakpoint('for-envelopeFooter-layoutSwitch', sget($breakpoint,
 .envelopeFooter-bottom-icons{
     display: flex;
     justify-content: space-between;
-    z-index: 12;
     @include breakpoint('for-envelopeFooter-stepUp2') {
         justify-content: space-around;
     }

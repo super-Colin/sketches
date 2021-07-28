@@ -25,10 +25,12 @@ $color: (
     'theme-main-dark':          $theme_color-main-dark,
     'theme-accent':             $theme_color-accent,
 
+    'overlay-light':      rgba(255, 255, 255, 0.5),
     'overlay-white-light':      rgba(255, 255, 255, 0.25),
     'overlay-white-medium':     rgba(255, 255, 255, 0.5),
     'overlay-white-dark':       rgba(255, 255, 255, 0.75),
 
+    'overlay-dark':      rgba(0, 0, 0, 0.5),
     'overlay-black-light':      rgba(0, 0, 0, 0.25),
     'overlay-black-medium':     rgba(0, 0, 0, 0.5),
     'overlay-black-dark':       rgba(0, 0, 0, 0.75)

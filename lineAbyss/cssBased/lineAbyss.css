@@ -1,0 +1,203 @@
+#lineAbyss_windowFrame {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  opacity: 100%;
+}
+
+#lineAbyss_windowFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lineAbyss_linesContainer {
+  width: 150vmax;
+  height: 150vmax;
+  position: absolute;
+  top: calc(calc(150vmax - 100vmax) / -2);
+  left: calc(calc(150vmax - 100vmin) / -2);
+  opacity: 100%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform: rotate(-60deg);
+}
+
+#lineAbyss_linesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-aspect-ratio: 1.01/1) {
+  #lineAbyss_linesContainer {
+    top: calc(calc(150vmax - 100vmin) / -2);
+    left: calc(calc(150vmax - 100vmax) / -2);
+  }
+}
+#lineAbyss_container .horizontalAbyss,
+.lineAbyss_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.lineAbyss_movingLine {
+  width: 10px;
+  height: 100%;
+  background-color: #2C2C2C;
+  opacity: 75%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation-name: moveLine;
+  animation-duration: 20s;
+  animation-timing-function: cubic-bezier(0.825, -0.01, 0.91, 0.33);
+  animation-iteration-count: infinite;
+}
+
+.lineAbyss_bg {
+  animation-name: changeColor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.lineAbyss_bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to top, #2C2C2C 2%, rgba(0, 0, 0, 0) 85%);
+}
+
+@keyframes moveLine {
+  0% {
+    left: 0;
+    width: 1px;
+  }
+  100% {
+    left: 100%;
+    width: 8vmax;
+  }
+}
+@keyframes changeColor {
+  0% {
+    background-color: #E56824;
+  }
+  16% {
+    background-color: #db4c14;
+  }
+  84% {
+    background-color: #8811d8;
+  }
+  100% {
+    background-color: #E56824;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.lineAbyss_movingLine-1 {
+  animation-delay: -1s;
+}
+
+.lineAbyss_movingLine-2 {
+  animation-delay: -2s;
+}
+
+.lineAbyss_movingLine-3 {
+  animation-delay: -3s;
+}
+
+.lineAbyss_movingLine-4 {
+  animation-delay: -4s;
+}
+
+.lineAbyss_movingLine-5 {
+  animation-delay: -5s;
+}
+
+.lineAbyss_movingLine-6 {
+  animation-delay: -6s;
+}
+
+.lineAbyss_movingLine-7 {
+  animation-delay: -7s;
+}
+
+.lineAbyss_movingLine-8 {
+  animation-delay: -8s;
+}
+
+.lineAbyss_movingLine-9 {
+  animation-delay: -9s;
+}
+
+.lineAbyss_movingLine-10 {
+  animation-delay: -10s;
+}
+
+.lineAbyss_movingLine-11 {
+  animation-delay: -11s;
+}
+
+.lineAbyss_movingLine-12 {
+  animation-delay: -12s;
+}
+
+.lineAbyss_movingLine-13 {
+  animation-delay: -13s;
+}
+
+.lineAbyss_movingLine-14 {
+  animation-delay: -14s;
+}
+
+.lineAbyss_movingLine-15 {
+  animation-delay: -15s;
+}
+
+.lineAbyss_movingLine-16 {
+  animation-delay: -16s;
+}
+
+.lineAbyss_movingLine-17 {
+  animation-delay: -17s;
+}
+
+.lineAbyss_movingLine-18 {
+  animation-delay: -18s;
+}
+
+.lineAbyss_movingLine-19 {
+  animation-delay: -19s;
+}
+
+.lineAbyss_movingLine-20 {
+  animation-delay: -20s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+/*# sourceMappingURL=lineAbyss.css.map */

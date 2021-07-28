@@ -4,11 +4,47 @@
 // Variables that are likely to be adjusted for each new theme
 
 
-
+body{
+//   It can be liberally applied to your layout as its main identity. */
+  --brand_color-darkAccent1-switchable: #99312A;
+  --brand_color-darkAccent1: #99312A;
+  /* Dark accent
+  Another accent color to consider.
+  Not all colors have to be used - sometimes a simple color scheme works best. */
+  /* --brand_color-darkShade1-switchable: #392E42; */
+  --brand_color-darkShade1-switchable: #220d20;
+  --brand_color-darkShade1: #220d20;
+  /* Dark shades
+  --brand_fontFamily-title: "Oswald",
+  sans-serif;
+  --brand_fontWeight-title-main: 500;
+  --brand_fontFamily-body: "Roboto",
+  sans-serif;
+  --brand_fontWeight-body-main: 400;
+  --brand_fontFamily-accent: "Montserrat",
+  sans-serif;
+  --brand_fontWeight-accent-main: 400;
+  /* ==-- Colors --== */
+  /* Colors have a switchable for dark mode compatibility */
+  --brand_color-lightShade1-switchable: #F2ECE7;
+  --brand_color-lightShade1: #F2ECE7;
+  /* Light shades
+  Use this color as the background for your dark-on-light designs,
+  or the text color of an inverted design. */
+  --brand_color-lightAccent1-switchable: #EFAF5E;
+  --brand_color-lightAccent1: #EFAF5E;
+  /* Light accent
+  Accent colors can be used to bring attention to design elements 
+  by contrasting with the rest of the palette. */
+  --brand_color-main2: #2AA187;
+  --brand_color-accent3: #6FCF97;
+  --brand_color-main1-switchable: #ED6C25;
+  --brand_color-main1: #ED6C25;
+}
 
 $theme_color-main: #ED6C25;
 $theme_color-main-light: #4E9D19;
-$theme_color-main-dark: #2E502F;
+$theme_color-main-dark: #392E42;
 
 $theme_color-accent: #1A7E13;
 $theme_color-accent-light: #1A7E13;
@@ -18,16 +54,21 @@ $theme_color-accent-dark: #1A7E13;
 $theme_color-button-light: #1A7E13;
 $theme_color-button-dark: #1A7E13;
 
-$theme_heading-font-family-main: 'Merriweather', serif;
-$theme_heading-font-family-accent: 'Merriweather', serif; // Keep accent defined even it's the same
+// <link rel="preconnect" href="https://fonts.gstatic.com">
+// <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+
+$theme_heading-font-family-main: 'Roboto Slab', serif;
+$theme_heading-font-family-accent: 'Roboto Slab', serif;
+$theme_heading-font-family-mono:'Roboto Mono', monospace;
 
 $theme_heading-font-weight-light: 300;
 $theme_heading-font-weight-main: 400; // Incase your font's normal weight is 500
 $theme_heading-font-weight-bold: 700; // Could be "bold" etc..
 
 
-$theme_body-font-family-main: 'Open Sans', sans-serif;
-$theme_body-font-family-accent: 'Open Sans', sans-serif;
+$theme_body-font-family-main: 'Roboto', sans-serif;
+$theme_body-font-family-accent: 'Roboto', sans-serif;
+$theme_body-font-family-mono:'Roboto Mono', monospace;
 
 $theme_body-font-weight-light: 300;
 $theme_body-font-weight-main: 400;

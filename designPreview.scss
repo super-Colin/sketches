@@ -127,11 +127,11 @@ $breakpoint : new-breakpoint('for-designPreview-desktop', map-get($breakpoint, '
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
-        align-items: center;
+        // align-items: center;
     }
     .designPreview_content-title{
         width: 100%;
-        margin-bottom: sget($spacing, 'xxlarge');
+        margin-bottom: sget($spacing, 'xlarge');
         font-size: sget($heading, 'font-size-large');
     }
     .designPreview_content-title-heading
@@ -141,6 +141,7 @@ $breakpoint : new-breakpoint('for-designPreview-desktop', map-get($breakpoint, '
     }
     .designPreview_content-body{
         width: 30%;
+        margin-top: 0;
     }
     .designPreview_content-desktopFrame{
         width: 68%;
