@@ -12,18 +12,6 @@
 
 
 
-<script>
-function getElementOffset(el) {
-  const rect = el.getBoundingClientRect();
-
-  return {
-    top: rect.top + window.pageYOffset,
-    left: rect.left + window.pageXOffset,
-  };
-}
-// document.querySelector('#marker1');
-</script>
-
 
 
 <body>
@@ -55,7 +43,7 @@ function getElementOffset(el) {
                 i++;
             } 
         }
-        makeMovingLines(20);
+        makeMovingLines(10);
       </script>
     </div>
   </div>
@@ -66,8 +54,9 @@ function getElementOffset(el) {
 
 
   <div style="margin: 50px;">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad, cum voluptas fugit amet cupiditate dolores nam laborum quibusdam dicta voluptate repellat, hic culpa nulla ipsam vitae perferendis distinctio doloremque.</p>
+    <p id="lastp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad, cum voluptas fugit amet cupiditate dolores nam laborum quibusdam dicta voluptate repellat, hic culpa nulla ipsam vitae perferendis distinctio doloremque.</p>
   </div>
 
+<script src="./lineAbyss.js"></script>
 </body>
 </html>

@@ -59,14 +59,13 @@
   position: absolute;
   left: 0;
   top: 0;
-  animation-name: moveLine;
   animation-duration: 20s;
   animation-timing-function: cubic-bezier(0.825, -0.01, 0.91, 0.33);
   animation-iteration-count: infinite;
 }
 
 .lineAbyss_bg {
-  animation-name: changeColor;
+  background-color: #E56824;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }

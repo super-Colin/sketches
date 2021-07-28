@@ -86,7 +86,7 @@ $abyssColor3: rgb(136, 17, 216);
   left: 0;
   top: 0;
 
-  animation-name: moveLine;
+  // animation-name: moveLine;
   animation-duration: 20s;
   animation-timing-function: cubic-bezier(0.825, -0.010, 0.910, 0.330);
   animation-iteration-count: infinite;
@@ -95,7 +95,8 @@ $abyssColor3: rgb(136, 17, 216);
 
 .lineAbyss_bg{
   // background-image: linear-gradient(to top, $abyssColor 2%, $orange 80%);
-  animation-name: changeColor;
+  // animation-name: changeColor;
+  background-color: $abyssColor1;
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
